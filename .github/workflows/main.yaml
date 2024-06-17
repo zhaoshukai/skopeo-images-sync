@@ -55,5 +55,3 @@ jobs:
           message: 'Add by Github Actions'
           add: '*.sync --force'
           cwd: './images/'
-        env:
-          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
