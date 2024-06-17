@@ -47,4 +47,11 @@ jobs:
           for f in $(yq -e '.on.push.paths' "${{ env.ACTIONSFILE }}" | awk '{print $2}'); \
             do eval test -f ${f} && eval .github/tools/skopeo-copy.sh ${f} "${{ env.REGISTRY }}/${{ env.REPOSITORY }}"; done
 
-
+      - name: Commit Synchronize Status
+        uses: EndBug/add-and-commit@v9
+        with:
+          author_name: Github Actions
+          author_email: mail@example.com
+          message: 'Add by Github Actions'
+          add: '*.sync --force'
+          cwd: './images/'
