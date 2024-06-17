@@ -7,6 +7,7 @@ docker.io:
     node:
       - latest
       - 20.14.0
+      - 18.20.3
     adolfintel/speedtest:
       - latest
     aiim/things-broker:
