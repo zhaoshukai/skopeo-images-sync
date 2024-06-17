@@ -44,7 +44,7 @@ jobs:
         # run: skopeo copy docker://docker.io/grafana/grafana:9.5.3 docker://${{ env.REGISTRY }}/${{ env.REPOSITORY }}/grafana/grafana:9.5.3
         run: |
           chmod +x .github/tools/skopeo-copy.sh
-          for f in $(yq -e '.on.push.paths' "${{ env.ACTIONSFILE }}" | awk '{print $2}'); \
+          for f in $(yq '.on.push.paths' "${{ env.ACTIONSFILE }}" | awk '{print $2}'); \
             do eval test -f ${f} && eval .github/tools/skopeo-copy.sh ${f} "${{ env.REGISTRY }}/${{ env.REPOSITORY }}"; done
 
       - name: Commit Synchronize Status
