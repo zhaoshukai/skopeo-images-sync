@@ -1,0 +1,115 @@
+# 已同步镜像列表
+docker.io:
+  images:
+    alpine:
+      - latest
+    node:
+      - latest
+      - 20.14.0
+    adolfintel/speedtest:
+      - latest
+    aiim/things-broker:
+      - V1.2.6
+    bitnami/kube-state-metrics:
+      - latest
+    bitnami/minio:
+      - 2022.10.15-debian-11-r0
+      - 2023.12.23-debian-11-r3
+    bitnami/mongodb:
+      - 4.2.15-debian-10-r31
+    bitnami/mysql:
+      - 8.0.26-debian-10-r60
+    bitnami/nats:
+      - 2.6.0-debian-10-r0
+      - 2.6.4-debian-10-r0
+    bitnami/prometheus-operator:
+      - latest
+    bitnami/redis:
+      - 5.0.14-debian-10-r6
+    busybox:
+      - "1.28"
+    easysoft/zentao:
+      - latest
+    longhornio/csi-attacher:
+      - v3.4.0
+    longhornio/csi-node-driver-registrar:
+      - v2.5.0
+    longhornio/csi-provisioner:
+      - v2.1.2
+    longhornio/csi-resizer:
+      - v1.2.0
+    longhornio/csi-snapshotter:
+      - v3.0.3
+    longhornio/longhorn-engine:
+      - v1.3.3
+    longhornio/longhorn-instance-manager:
+      - v1_20230407
+    longhornio/longhorn-manager:
+      - v1.3.3
+    longhornio/longhorn-ui:
+      - v1.3.3
+    minio/mc:
+      - latest
+    minio/minio:
+      - RELEASE.2021-07-30T00-02-00Z
+    nginx:
+      - latest
+    opensearchproject/opensearch-dashboards:
+      - 2.10.0
+      - 2.8.0
+    opensearchproject/opensearch:
+      - 2.10.0
+      - 2.8.0
+    progrium/stress:
+      - latest
+    prom/alertmanager:
+      - v0.25.0
+      - v0.27.0
+    prom/prometheus:
+      - v2.44.0
+      - v2.50.1
+    rancher/fleet-agent:
+      - v0.5.3
+    rancher/fleet:
+      - v0.5.1
+      - v0.5.3
+    rancher/gitjob:
+      - v0.1.32
+      - v0.1.32-security1
+    rancher/rancher-webhook:
+      - v0.2.10
+      - v0.2.8
+    rancher/rancher:
+      - v2.6.10
+      - v2.6.13
+    snowdreamtech/frpc:
+      - 0.45.0
+    snowdreamtech/frps:
+      - 0.45.0
+    tdengine/tdengine:
+      - 2.6.0.10
+    timonwong/prometheus-webhook-dingtalk:
+      - v2.1.0
+    velero/velero:
+      - v1.13.0
+      - v1.9.2
+    vesoft/nebula-console:
+      - v3.0.0
+      - v3.6.0
+    vesoft/nebula-graphd:
+      - v3.2.1
+      - v3.6.0
+    vesoft/nebula-metad:
+      - v3.2.1
+      - v3.6.0
+    vesoft/nebula-storaged:
+      - v3.2.1
+      - v3.6.0
+    vesoft/nebula-stats-exporter:
+      - v3.1.0
+    victoriametrics/victoria-metrics:
+      - v1.81.1
+      - v1.91.3
+    willdockerhub/nfs-subdir-external-provisioner:
+      - v4.0.2
+  updated: 2024-06-17T10:58:40Z
