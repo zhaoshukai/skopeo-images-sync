@@ -16,7 +16,7 @@ env:
   REPOSITORY: "${{ vars.PUBLIC_CR_REPOSITORY }}"
   USERNAME: "${{ secrets.PUBLIC_CR_USERNAME }}"
   PASSWORD: "${{ secrets.PUBLIC_CR_PASSWORD }}"
-  IMAGEFILE: images/images.yaml
+  IMAGEFILE: images/harbor.yaml
   ACTIONSFILE: .github/workflows/harbor.yaml
 
 jobs:
