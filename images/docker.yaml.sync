@@ -6,6 +6,7 @@ docker.io:
     node:
       - latest
       - 20.14.0
+      - 18.20.3
     adolfintel/speedtest:
       - latest
     aiim/things-broker:
@@ -112,4 +113,4 @@ docker.io:
       - v1.91.3
     willdockerhub/nfs-subdir-external-provisioner:
       - v4.0.2
-  updated: 2024-06-17T10:58:40Z
+  updated: 2024-06-17T11:08:39Z
