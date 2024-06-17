@@ -29,7 +29,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 1200
     permissions:
-      contents: read
+      contents: write
       packages: write
       attestations: write
 
