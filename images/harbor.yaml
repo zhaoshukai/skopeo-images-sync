@@ -1,0 +1,20 @@
+# for Harbor images
+docker.io:
+  tls-verify: false
+  images:
+    goharbor/harbor-core:
+      - v2.10.2
+    goharbor/harbor-db:
+      - v2.10.2
+    goharbor/harbor-jobservice:
+      - v2.10.2
+    goharbor/harbor-portal:
+      - v2.10.2
+    goharbor/harbor-registryctl:
+      - v2.10.2
+    goharbor/redis-photon:
+      - v2.10.2
+    goharbor/registry-photon:
+      - v2.10.2
+    goharbor/trivy-adapter-photon:
+      - v2.10.2

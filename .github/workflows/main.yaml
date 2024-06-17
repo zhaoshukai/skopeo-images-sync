@@ -1,0 +1,50 @@
+# 同步 docker 镜像
+
+name: Synchronize images
+
+on:
+  workflow_dispatch:
+    inputs:
+      label:
+        description: 'skopeo'
+        required: false
+  push:
+    branches: 
+      - 'main'
+      - 'release'
+    paths:
+      - 'images/images.yaml'
+      - 'images/docker.yaml'
+
+env:
+  REGISTRY: "${{ vars.HARBOR_REGISTRY }}"
+  REPOSITORY: "${{ vars.HARBOR_REPOSITORY }}"
+  USERNAME: "${{ secrets.HARBOR_USERNAME }}"
+  PASSWORD: "${{ secrets.HARBOR_PASSWORD }}"
+  IMAGEFILE: images/images.yaml
+  ACTIONSFILE: .github/workflows/main.yaml
+
+jobs:
+  skopeo-copy-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 1200
+    permissions:
+      contents: read
+      packages: write
+      attestations: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Login to the Container registry
+        run: echo "${{ env.PASSWORD }}" | skopeo login -u "${{ env.USERNAME }}" --password-stdin ${{ env.REGISTRY }}
+
+      - name: Synchronize Container images To ${{ env.REGISTRY }}
+        # run: skopeo copy docker://docker.io/grafana/grafana:9.5.3 docker://${{ env.REGISTRY }}/${{ env.REPOSITORY }}/grafana/grafana:9.5.3
+        run: |
+          chmod +x .github/tools/skopeo-copy.sh
+          for f in $(yq -e '.on.push.paths' "${{ env.ACTIONSFILE }}" | awk '{print $2}'); \
+            do eval test -f ${f} && eval .github/tools/skopeo-copy.sh ${f} "${{ env.REGISTRY }}/${{ env.REPOSITORY }}"; done
+
+
