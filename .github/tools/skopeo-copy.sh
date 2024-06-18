@@ -21,7 +21,7 @@ getSyncStatus()
     if [ ! -f "${SYNCSTATUS_FILE}" ]; then
         echo -e "# 已同步镜像列表\n" >${SYNCSTATUS_FILE}
     fi
-    eval $(echo "yq -e '.\"${REGISTRY}\".images.\"${REPOSITORY}\".[] | select (. == \"${TAG}\")' ${SYNCSTATUS_FILE}") 2>/dev/null
+    eval $(echo "yq -e '.\"${REGISTRY}\".images.\"${REPOSITORY}\".[] | select(. == \"${TAG}\")' ${SYNCSTATUS_FILE}") 2>/dev/null
     return $?
 }
 
@@ -35,6 +35,7 @@ updateSyncStatus()
 
     local line=$(eval $(echo "yq '.\"${REGISTRY}\".images.\"${REPOSITORY}\".[]' ${SYNCSTATUS_FILE} | wc -l"))
     eval $(echo "yq -i '.\"${REGISTRY}\".images.\"${REPOSITORY}\".["${line}"] = \"${TAG}\"' ${SYNCSTATUS_FILE}")
+    eval $(echo "yq -i 'with(.\"${REGISTRY}\".images.\"${REPOSITORY}\"; . = (. | sort | unique))' ${SYNCSTATUS_FILE}")
     eval $(echo "yq -i '.\"${REGISTRY}\".updated = now' ${SYNCSTATUS_FILE}")
 }
 
@@ -77,15 +78,15 @@ getTag()
 ## Synchronize Container images
 # skopeo copy docker://docker.io/grafana/grafana:9.5.3 docker://hub.local.lan/grafana/grafana:9.5.3
 # REGISTRY=$(getRegistry)
-for reg in $(getRegistry); 
+for reg in $(getRegistry);
 do
     # REPOSITORY=$(getRepository $reg)
-    for repo in $(getRepository $reg); 
+    for repo in $(getRepository $reg);
     do
         # TAGS=$(getTag $reg $repo)
-        for tag in $(getTag $reg $repo); 
+        for tag in $(getTag $reg $repo);
         do
-            if [ ! $(getSyncStatus ${reg} ${repo} ${tag}) ]; then
+            if [ ! "$(getSyncStatus ${reg} ${repo} ${tag})" ]; then
                 echo "+ skopeo copy docker://${reg}/${repo}:${tag} docker://${IMAGES_REPO}/${repo}:${tag}"
                 skopeo copy --retry-times 5 docker://${reg}/${repo}:${tag} docker://${IMAGES_REPO}/${repo}:${tag}
                 updateSyncStatus ${reg} ${repo} ${tag}
