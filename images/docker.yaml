@@ -15,6 +15,17 @@ docker.io:
       - latest
       - 20.14.0
       - 18.20.3
+    ubuntu:
+      - 24.10
+      - 24.04
+      - 22.10
+      - 22.04
+      - 20.10
+      - 20.04
+      - 18.10
+      - 18.04
+      - 16.10
+      - 16.04
     adolfintel/speedtest:
       - latest
     aiim/things-broker:
@@ -59,7 +70,7 @@ docker.io:
     longhornio/longhorn-ui:
       - v1.3.3
     minio/mc:
-      - latest
+      - RELEASE.2023-08-30T08-02-26Z
     minio/minio:
       - RELEASE.2021-07-30T00-02-00Z
     opensearchproject/opensearch-dashboards:
