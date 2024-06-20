@@ -10,11 +10,29 @@
 - [Actions - main](.github/workflows/main.yaml)
   通过 `skopeo copy` 命令同步到仓库名称 **支持斜线** `my-registry.local.lan`/`repo`/`grafana/grafana`:`9.5.3` 的自建仓库，如 **Harbar**。
 - [Actions - Harbor](.github/workflows/main.yaml)
-  通过 `skopeo sync` 命令同步到仓库名称 **不支持斜线** 的一些公有云仓库，如 **ccr.ccs.tencentyun.com**。
+  通过 `skopeo sync` 命令同步到仓库名称 **不支持斜线** 的一些公有云仓库，如：**ccr.ccs.tencentyun.com**、**registry.aliyuncs.com**。
+
+### Actions 环境变量
+- 自建 Harbor 镜像仓库（仓库名支持斜线）
+  | Actions变量  | 引用变量           | 变量类型   | 备注             |
+  |--------------|-------------------|-----------|------------------|
+  | REGISTRY     | HARBOR_REGISTRY   | variables | Harbor 服务地址   |
+  | REPOSITORY   | HARBOR_REPOSITORY | variables | Harbor 仓库项目名 |
+  | USERNAME     | HARBOR_USERNAME   | secrets   | Harbor 用户名     |
+  | PASSWORD     | HARBOR_PASSWORD   | secrets   | Harbor 用户密码   |
+
+- 公有云 镜像仓库（仓库名不支持斜线）
+  | Actions变量  | 引用变量              | 变量类型   | 备注             |
+  |--------------|----------------------|-----------|------------------|
+  | REGISTRY     | PUBLIC_CR_REGISTRY   | variables | 仓库服务地址      |
+  | REPOSITORY   | PUBLIC_CR_REPOSITORY | variables | 仓库命名空间名称  |
+  | USERNAME     | PUBLIC_CR_USERNAME   | secrets   | 仓库登陆名        |
+  | PASSWORD     | PUBLIC_CR_PASSWORD   | secrets   | 仓库登陆密码      |
 
 ### 其它
 - `skopeo copy` 命令会将结果写入 [.sync](images/images.yaml.sync) 文件，如需要重新同步可删除相关文件或特定镜像的tag。
-
+- `skopeo list-tags REPOSITORY-NAME` 命令可以获取特定镜像的tag列表，如：
+  > skopeo list-tags docker://docker.io/fedora
 
 ## skopeo 命令示例
 ### 配置 镜像清单 文件
