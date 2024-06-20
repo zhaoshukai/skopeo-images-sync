@@ -72,7 +72,7 @@
   ```
 - 目标仓库内容（目标仓库路径为指定）：
   ```
-  my-registry.local.lan/repo/repo/httpd:latest
+  my-registry.local.lan/repo/httpd:latest
   my-registry.local.lan/repo/grafana/grafana:9.5.3
   ```
 
@@ -83,6 +83,6 @@
   ```
 - 目标仓库内容（目标仓库路径被压缩）：
   ```
-  my-registry.local.lan/repo/repo/httpd:latest
+  my-registry.local.lan/repo/httpd:latest
   my-registry.local.lan/repo/grafana:9.5.3
   ```
