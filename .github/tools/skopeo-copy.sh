@@ -35,6 +35,7 @@ updateSyncStatus()
 
     local line=$(eval $(echo "yq '.\"${REGISTRY}\".images.\"${REPOSITORY}\".[]' ${SYNCSTATUS_FILE} | wc -l"))
     eval $(echo "yq -i '.\"${REGISTRY}\".images.\"${REPOSITORY}\".["${line}"] = \"${TAG}\"' ${SYNCSTATUS_FILE}")
+    eval $(echo "yq -i 'with(.\"${REGISTRY}\".images; . = sort_keys(.))' ${SYNCSTATUS_FILE}")
     eval $(echo "yq -i 'with(.\"${REGISTRY}\".images.\"${REPOSITORY}\"; . = (. | sort | unique))' ${SYNCSTATUS_FILE}")
     eval $(echo "yq -i '.\"${REGISTRY}\".updated = now' ${SYNCSTATUS_FILE}")
 }
