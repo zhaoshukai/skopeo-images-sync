@@ -1,19 +1,15 @@
 # 已同步镜像列表
 docker.io:
   images:
+    adolfintel/speedtest:
+      - latest
+    aiim/things-broker:
+      - V1.2.6
     alpine:
       - 3.18.6
       - 3.19.0
       - 3.20.0
       - latest
-    node:
-      - latest
-      - 20.14.0
-      - 18.20.3
-    adolfintel/speedtest:
-      - latest
-    aiim/things-broker:
-      - V1.2.6
     bitnami/kube-state-metrics:
       - 2.12.0
       - latest
@@ -62,10 +58,17 @@ docker.io:
       - 1.24.0
       - 1.26.0
       - latest
-    opensearchproject/opensearch-dashboards:
+    node:
+      - latest
+      - 20.14.0
+      - 18.20.3
+    nvidia/cuda:
+      - 11.7.1-devel-ubuntu22.04
+      - 12.2.2-devel-ubuntu22.04
+    opensearchproject/opensearch:
       - 2.10.0
       - 2.8.0
-    opensearchproject/opensearch:
+    opensearchproject/opensearch-dashboards:
       - 2.10.0
       - 2.8.0
     progrium/stress:
@@ -76,20 +79,20 @@ docker.io:
     prom/prometheus:
       - v2.44.0
       - v2.50.1
-    rancher/fleet-agent:
-      - v0.5.3
     rancher/fleet:
       - v0.5.1
+      - v0.5.3
+    rancher/fleet-agent:
       - v0.5.3
     rancher/gitjob:
       - v0.1.32
       - v0.1.32-security1
-    rancher/rancher-webhook:
-      - v0.2.10
-      - v0.2.8
     rancher/rancher:
       - v2.6.10
       - v2.6.13
+    rancher/rancher-webhook:
+      - v0.2.10
+      - v0.2.8
     snowdreamtech/frpc:
       - 0.45.0
     snowdreamtech/frps:
@@ -98,6 +101,17 @@ docker.io:
       - 2.6.0.10
     timonwong/prometheus-webhook-dingtalk:
       - v2.1.0
+    ubuntu:
+      - "16.04"
+      - "16.10"
+      - "18.04"
+      - "18.10"
+      - "20.04"
+      - "20.10"
+      - "22.04"
+      - "22.10"
+      - "24.04"
+      - "24.10"
     velero/velero:
       - v1.13.0
       - v1.9.2
@@ -110,25 +124,16 @@ docker.io:
     vesoft/nebula-metad:
       - v3.2.1
       - v3.6.0
+    vesoft/nebula-stats-exporter:
+      - v3.1.0
     vesoft/nebula-storaged:
       - v3.2.1
       - v3.6.0
-    vesoft/nebula-stats-exporter:
-      - v3.1.0
     victoriametrics/victoria-metrics:
       - v1.81.1
       - v1.91.3
     willdockerhub/nfs-subdir-external-provisioner:
       - v4.0.2
-    ubuntu:
-      - "16.04"
-      - "16.10"
-      - "18.04"
-      - "18.10"
-      - "20.04"
-      - "20.10"
-      - "22.04"
-      - "22.10"
-      - "24.04"
-      - "24.10"
-  updated: 2024-06-19T02:20:00Z
+    zlmediakit/zlmediakit:
+      - master
+  updated: 2024-06-21T10:20:11Z
