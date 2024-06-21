@@ -131,3 +131,9 @@ docker.io:
       - v1.91.3
     willdockerhub/nfs-subdir-external-provisioner:
       - v4.0.2
+
+    zlmediakit/zlmediakit:
+      - master
+    nvidia/cuda:
+      - 11.7.1-devel-ubuntu22.04
+      - 12.2.2-devel-ubuntu22.04
