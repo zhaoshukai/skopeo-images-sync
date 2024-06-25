@@ -23,6 +23,8 @@ docker.io:
     bitnami/nats:
       - 2.6.0-debian-10-r0
       - 2.6.4-debian-10-r0
+    bitnami/os-shell:
+      - 11-debian-11-r91
     bitnami/prometheus-operator:
       - latest
     bitnami/redis:
@@ -136,4 +138,4 @@ docker.io:
       - v4.0.2
     zlmediakit/zlmediakit:
       - master
-  updated: 2024-06-21T10:20:11Z
+  updated: 2024-06-25T01:28:12Z
