@@ -44,11 +44,23 @@ docker.io:
       - 2.6.0-debian-10-r0
       - 2.6.4-debian-10-r0
     bitnami/os-shell:
+      - latest
       - 11-debian-11-r91
     bitnami/prometheus-operator:
       - latest
+      - 0.74.0
+      - 0.73.2
+      - 0.73.0
+      - 0.72.0
+      - 0.71.0
+      - 0.70.0
+      - 0.69.0
+      - 0.68.0
     bitnami/redis:
       - 5.0.14-debian-10-r6
+    bitnami/sonarqube:
+      - latest
+      - 10.2.1-debian-11-r0
     busybox:
       - 1.28
     easysoft/zentao:
