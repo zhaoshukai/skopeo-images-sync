@@ -43,6 +43,8 @@ docker.io:
     bitnami/nats:
       - 2.6.0-debian-10-r0
       - 2.6.4-debian-10-r0
+    bitnami/os-shell:
+      - 11-debian-11-r91
     bitnami/prometheus-operator:
       - latest
     bitnami/redis:
