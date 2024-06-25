@@ -13,7 +13,10 @@ docker.io:
       - 1.24.0
     node:
       - latest
+      - 20.15.0
+      - 20.15.0-alpine
       - 20.14.0
+      - 20.14.0-alpine
       - 18.20.3
     ubuntu:
       - 24.10
