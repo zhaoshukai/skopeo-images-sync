@@ -117,6 +117,8 @@ docker.io:
     velero/velero:
       - v1.13.0
       - v1.9.2
+    velero/velero-plugin-for-aws:
+      - v1.5.1
     vesoft/nebula-console:
       - v3.0.0
       - v3.6.0
@@ -138,4 +140,4 @@ docker.io:
       - v4.0.2
     zlmediakit/zlmediakit:
       - master
-  updated: 2024-06-25T01:28:12Z
+  updated: 2024-06-25T01:46:33Z
