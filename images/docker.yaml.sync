@@ -10,6 +10,12 @@ docker.io:
       - 3.19.0
       - 3.20.0
       - latest
+    bitnami/git:
+      - 2.35.0
+      - 2.43.2
+      - 2.44.0
+      - 2.45.2
+      - latest
     bitnami/kube-state-metrics:
       - 2.12.0
       - latest
@@ -155,4 +161,4 @@ docker.io:
       - v4.0.2
     zlmediakit/zlmediakit:
       - master
-  updated: 2024-06-25T02:37:10Z
+  updated: 2024-06-25T08:32:03Z
