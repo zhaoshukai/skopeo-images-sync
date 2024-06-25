@@ -33,6 +33,12 @@ docker.io:
       - latest
     aiim/things-broker:
       - V1.2.6
+    bitnami/git:
+      - latest
+      - 2.45.2
+      - 2.44.0
+      - 2.43.2
+      - 2.35.0
     bitnami/kube-state-metrics:
       - latest
       - 2.12.0
