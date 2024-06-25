@@ -25,10 +25,22 @@ docker.io:
       - 2.6.4-debian-10-r0
     bitnami/os-shell:
       - 11-debian-11-r91
+      - latest
     bitnami/prometheus-operator:
+      - 0.68.0
+      - 0.69.0
+      - 0.70.0
+      - 0.71.0
+      - 0.72.0
+      - 0.73.0
+      - 0.73.2
+      - 0.74.0
       - latest
     bitnami/redis:
       - 5.0.14-debian-10-r6
+    bitnami/sonarqube:
+      - 10.2.1-debian-11-r0
+      - latest
     busybox:
       - "1.28"
     easysoft/zentao:
@@ -61,9 +73,12 @@ docker.io:
       - 1.26.0
       - latest
     node:
-      - latest
-      - 20.14.0
       - 18.20.3
+      - 20.14.0
+      - 20.14.0-alpine
+      - 20.15.0
+      - 20.15.0-alpine
+      - latest
     nvidia/cuda:
       - 11.7.1-devel-ubuntu22.04
       - 12.2.2-devel-ubuntu22.04
@@ -140,4 +155,4 @@ docker.io:
       - v4.0.2
     zlmediakit/zlmediakit:
       - master
-  updated: 2024-06-25T01:46:33Z
+  updated: 2024-06-25T02:37:10Z
