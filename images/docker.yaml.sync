@@ -74,6 +74,7 @@ docker.io:
       - latest
     minio/minio:
       - RELEASE.2021-07-30T00-02-00Z
+      - RELEASE.2023-12-23T07-19-11Z
     nginx:
       - 1.24.0
       - 1.26.0
@@ -161,4 +162,4 @@ docker.io:
       - v4.0.2
     zlmediakit/zlmediakit:
       - master
-  updated: 2024-06-25T08:32:03Z
+  updated: 2024-06-26T06:45:53Z
