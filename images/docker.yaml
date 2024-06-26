@@ -96,6 +96,7 @@ docker.io:
       - RELEASE.2023-08-30T08-02-26Z
     minio/minio:
       - RELEASE.2021-07-30T00-02-00Z
+      - RELEASE.2023-12-23T07-19-11Z
     opensearchproject/opensearch-dashboards:
       - 2.10.0
       - 2.8.0
