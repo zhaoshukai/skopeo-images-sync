@@ -51,6 +51,15 @@ docker.io:
       - "1.28"
     easysoft/zentao:
       - latest
+    jenkins/inbound-agent:
+      - 3206.vb_15dcf73f6a_9-2
+      - latest
+      - latest-alpine
+      - latest-jdk17
+    jenkins/jenkins:
+      - 2.440.3-jdk17
+      - 2.452.2-jdk17
+      - latest
     longhornio/csi-attacher:
       - v3.4.0
     longhornio/csi-node-driver-registrar:
@@ -162,4 +171,4 @@ docker.io:
       - v4.0.2
     zlmediakit/zlmediakit:
       - master
-  updated: 2024-06-26T06:45:53Z
+  updated: 2024-06-27T07:26:56Z
