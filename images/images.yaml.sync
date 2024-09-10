@@ -24,3 +24,9 @@ skywalking.docker.scarf.sh:
       - 9.1.0
       - 9.7.0
   updated: 2024-06-17T10:53:16Z
+ghcr.io:
+  images:
+    kafbat/kafka-ui:
+      - '-'
+      - v1.0.0
+  updated: 2024-09-10T01:42:29Z

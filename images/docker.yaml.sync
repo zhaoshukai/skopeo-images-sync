@@ -16,6 +16,8 @@ docker.io:
       - 2.44.0
       - 2.45.2
       - latest
+    bitnami/kafka:
+      - 3.8.0-debian-12-r3
     bitnami/kube-state-metrics:
       - 2.12.0
       - latest
@@ -26,6 +28,8 @@ docker.io:
       - 4.2.15-debian-10-r31
     bitnami/mysql:
       - 8.0.26-debian-10-r60
+    bitnami/mysqld-exporter:
+      - 0.13.0-debian-10-r105
     bitnami/nats:
       - 2.6.0-debian-10-r0
       - 2.6.4-debian-10-r0
@@ -51,6 +55,8 @@ docker.io:
       - "1.28"
     easysoft/zentao:
       - latest
+    grafana/grafana:
+      - 9.5.20
     jenkins/inbound-agent:
       - 3206.vb_15dcf73f6a_9-2
       - latest
@@ -98,6 +104,8 @@ docker.io:
     nvidia/cuda:
       - 11.7.1-devel-ubuntu22.04
       - 12.2.2-devel-ubuntu22.04
+    obsidiandynamics/kafdrop:
+      - 4.0.2
     opensearchproject/opensearch:
       - 2.10.0
       - 2.8.0
@@ -171,4 +179,4 @@ docker.io:
       - v4.0.2
     zlmediakit/zlmediakit:
       - master
-  updated: 2024-06-27T07:26:56Z
+  updated: 2024-09-10T01:42:50Z
