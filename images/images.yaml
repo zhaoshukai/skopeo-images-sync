@@ -26,3 +26,10 @@ skywalking.docker.scarf.sh:
     apache/skywalking-ui:
       - 9.1.0
       - 9.7.0
+
+ghcr.io:
+  tls-verify: false
+  images:
+    kafbat/kafka-ui:
+      # - latest
+      - v1.0.0
