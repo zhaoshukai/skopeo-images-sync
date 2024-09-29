@@ -7,10 +7,10 @@
   `skopeo sync` 命令格式的镜像清单文件，同时也用于 **skopeo copy** 命令。
 - [skopeo-copy.sh](.github/tools/skopeo-copy.sh)
   一个用来解析 **[sync.yaml](images/images.yaml)** 并转换为 `skopeo copy` 格式的小脚本。
-- [Actions - main](.github/workflows/main.yaml)
-  通过 `skopeo copy` 命令同步到仓库名称 **支持斜线** `my-registry.local.lan`/`repo`/`grafana/grafana`:`9.5.3` 的自建仓库，如 **Harbar**。
-- [Actions - Harbor](.github/workflows/main.yaml)
-  通过 `skopeo sync` 命令同步到仓库名称 **不支持斜线** 的一些公有云仓库，如：**ccr.ccs.tencentyun.com**、**registry.aliyuncs.com**。
+- [Actions - Main](.github/workflows/main.yaml)
+  通过 `skopeo copy` 命令同步到仓库名称 **不支持斜线** 的一些公有云仓库，如：**ccr.ccs.tencentyun.com**、**registry.aliyuncs.com**。
+- [Actions - Harbor](.github/workflows/harbor.yaml)
+  通过 `skopeo sync` 命令同步到仓库名称 **支持斜线** `my-registry.local.lan`/`repo`/`grafana/grafana`:`9.5.3` 的自建仓库，如 **Harbar**。
 
 ### Actions 环境变量
 - 自建 Harbor 镜像仓库（仓库名支持斜线）
